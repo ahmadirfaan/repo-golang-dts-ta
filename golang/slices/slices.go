@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func test() {
 	var fruits = []string{"apple", "grape", "banana", "melon", "tomato"}
 	var vegetables = []string{"cucumber", "spinach", "kale", "lettuce", "tomato?"}
 
