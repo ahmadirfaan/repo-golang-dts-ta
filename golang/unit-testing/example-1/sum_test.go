@@ -8,8 +8,8 @@ import (
 //Buatlah Test Sum
 func TestSum(t *testing.T) {
 	ans := Sum(2, -2)
-	if ans != 2 {
-		t.Errorf("IntMin(2,-2) = %d; want 0", ans)
+	if ans != 0 {
+		t.Errorf("Sum(2,-2) = %d; want 0", ans)
 	}
 }
 

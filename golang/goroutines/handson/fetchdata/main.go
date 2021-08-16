@@ -29,9 +29,9 @@ func responseSize(url string) {
 }
 
 func main() {
-	ch := make(chan string, 3)
-	go responseSize("https://golangprograms.com", ch)
-	go responseSize("https://coderwall.com", ch)
-	go responseSize("https://stackoverflow.com", ch)
+	// ch := make(chan string, 3)
+	go responseSize("https://golangprograms.com")
+	go responseSize("https://coderwall.com")
+	go responseSize("https://stackoverflow.com")
 	time.Sleep(3000 * time.Millisecond)
 }
