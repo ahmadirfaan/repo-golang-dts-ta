@@ -25,18 +25,22 @@ type Storage struct {
 }
 
 const (
+	class    = "kelas_b"
+	email    = "rubiagatra@gmail.com"
 	testJSON = `
 		{
 			"hello" : "hi!",
 			"Rakamin": "Ini untuk materi rakamin"
 		}
 	`
-	testFilename = `test.json`
 )
+
+var testFilename = fmt.Sprintf("%s_%s_test.json", class, email)
+
 
 func main() {
 	cfg := new(Config)
-	err := config.LoadConfig(cfg, "externalsvc/.env", "./externalsvc/.env")
+	err := config.LoadConfig(cfg, "externalsvc/.env", "./externalsvc/.env") //ini merupakan kode untuk menjalankan go run dan mendapatkan .env di luar
 	if err != nil {
 		log.Printf("Error in loading the config: %v.", err)
 		return
